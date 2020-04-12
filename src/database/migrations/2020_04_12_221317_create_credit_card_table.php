@@ -19,7 +19,8 @@ class CreateCreditCardTable extends Migration
             $table->integer("number");
             $table->string("name");
             $table->date("expirationDate");
-            $table->foreign('client_id')->references('id')->on("clients");
+            $table->integer("client_id")->unsigned();
+            $table->foreign('client_id')->references('id')->on("client");
             $table->timestamps();
         });
     }
