@@ -19,7 +19,7 @@ class CreateClientTable extends Migration
             $table->string("address");
             $table->boolean("checked");
             $table->longText("description");
-            $table->string("interest");
+            $table->string("interest")->nullable();
             $table->date("date_of_birth");
             $table->string("email");
             $table->timestamps();
